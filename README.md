@@ -25,3 +25,12 @@ Currently the file will run all of the pages of the pdf. I did this so that you 
 This is a bottle neck because it take time to parse the file. However once parsed it is relatively faster.
 
 Anther step to get the code ready for production would be to replace the search function. Currently, the code is using built in `.filter()` method. This can hurt performance on a larger data set. I would suggest to implement a more complex algorithm for this.
+
+# Extra Notes
+
+I ended up using the following npm package to orginally parse the table
+https://www.npmjs.com/package/pdf-table-extractor
+
+I did got through a few of the avaible tools on npm but eventually landed on this one since it read table data specifically. The output however was less than optimal so alot of my code is parsing that data to a more optimal json array. 
+
+If this was production I would attempt to rewrite this package internally because it seems to not have a lot of traction and maintenance which scares me personally. 
