@@ -1,3 +1,3 @@
-var pdfParse = require('./index');
+var pdfParse = require('./pdfParse');
 
 pdfParse.parsePdfFile("pdfData.pdf");

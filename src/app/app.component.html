@@ -1,0 +1,6 @@
+<input id="searchTerm" [(ngModel)]="searchTerm" placeholder="Search Term"/>
+<select [(ngModel)]="selectedKeyValue">
+  <option *ngFor="let key of keys" [ngValue]="key">{{key}}</option>
+</select>
+<button (click)="searchValue()">Search</button>
+<pre [innerHtml]="response | prettyjson:4"></pre>

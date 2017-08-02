@@ -57,7 +57,7 @@ function success(result) {
     }
   }
 
-  fs.writeFile('./output.json', JSON.stringify(parsedData), function(err) {
+  fs.writeFile('./src/assets/output.json', JSON.stringify(parsedData), function(err) {
     if (err) {
       return console.log(err);
     }
@@ -76,11 +76,3 @@ module.exports = {
     pdf_table_extractor(fileName, success, error); // "pdfData.pdf""
   },
 }
-
-/*
-export function searchAttribute(data, key, searchTerm) {
-  return data.filter(function(x) {
-    return x[key] === searchTerm;
-  });
-}
-*/
