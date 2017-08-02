@@ -13,7 +13,8 @@ function newLineToArray(input) {
 function success(result) {
   const parsedData = [];
 
-  for (let j = 0; j < 10; j++) {
+  for (let j = 0; j < result.pageTables.length; j++) { // UNCOMMENT FOR FULL DATASET
+    //for (let j = 0; j < 10; j++) {
     for (let i = 1; i < result.pageTables[j].tables.length; i++) {
       const cur = result.pageTables[j].tables[i];
 
